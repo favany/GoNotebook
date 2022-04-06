@@ -17,3 +17,7 @@
 * [Channel](concurrence/channel.md)
 * [goroutine](concurrence/goroutine.md)
 * [并发](concurrence/bing-fa.md)
+
+## 常用代码块 <a href="#blocks" id="blocks"></a>
+
+* [gerr](blocks/gerr.md)
