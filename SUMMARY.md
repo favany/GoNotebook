@@ -21,3 +21,7 @@
 ## 常用代码块 <a href="#blocks" id="blocks"></a>
 
 * [gerr](blocks/gerr.md)
+
+## Go Web 开发进阶 <a href="#go-web-pro" id="go-web-pro"></a>
+
+* [MySQL 的连接和初始化](go-web-pro/mysql-de-lian-jie-he-chu-shi-hua.md)
