@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Go](README.md)
+
 ## Struct 结构体 <a href="#struct" id="struct"></a>
 
-* [自定义类型](README.md)
+* [自定义类型](<README (1).md>)
 * [结构体](struct/jie-gou-ti.md)
 * [匿名结构体](struct/ni-ming-jie-gou-ti.md)
 * [接口 interface](struct/interface.md)
