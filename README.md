@@ -1,5 +1,6 @@
 ---
-coverY: 363.80779691749774
+cover: .gitbook/assets/5 (2).png
+coverY: 11.677243880326383
 ---
 
 # Go
