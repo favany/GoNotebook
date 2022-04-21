@@ -39,7 +39,7 @@ insert into user (name, age) values("violette", 23)
 select * from user;
 ```
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 
 
@@ -64,7 +64,14 @@ func queryRow() {
 }
 ```
 
-
+![](<../.gitbook/assets/image (1).png>)
 
 多行查询
 
+
+
+
+
+
+
+![](<../.gitbook/assets/image (5).png>)
