@@ -1,3 +1,7 @@
+---
+description: Go 原生操作 MySQL
+---
+
 # Crud
 
 先输入以下命令，在 MySQL 中建立一张表。
@@ -19,15 +23,48 @@ show tables;
 
 <img src="../.gitbook/assets/image.png" alt="" data-size="original">
 
-插入一条数据：
+插入两条数据：
 
 ```sql
 insert into user (name, age) values("bingo", 22)
 ```
 
-查询可得到该条数据：
+```sql
+insert into user (name, age) values("violette", 23)
+```
+
+查询可得到这些数据：
 
 ```sql
 select * from user;
 ```
+
+![](<../.gitbook/assets/image (3).png>)
+
+
+
+单行查询
+
+```go
+func (db *DB) QueryRow(query string, args ...interface{}) *Row go
+```
+
+```go
+// queryRow 查询单条数据
+func queryRow() {
+	sqlStr := "select id, name, age from user where id =?"
+	var u user
+	// 非常重要：确保 QueryRow 之后调用 Scan 方法，否则持有的数据库连接不会被释放
+	err := db.QueryRow(sqlStr, 1).Scan(&u.id, &u.name, &u.age) // 1 代表获取第一条
+	if err != nil {
+		fmt.Printf("scan failed, err:%v\n", err)
+		return
+	}
+	fmt.Printf("id:%d name:%s age:%d\n", u.id, u.name, u.age)
+}
+```
+
+
+
+多行查询
 
