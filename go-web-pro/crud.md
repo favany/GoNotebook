@@ -64,14 +64,33 @@ func queryRow() {
 }
 ```
 
-![](<../.gitbook/assets/image (1).png>)
+查询结果：![](<../.gitbook/assets/image (1).png>)
 
 多行查询
 
+```go
+// queryMultiRows 查询多条数据
+func queryMultiRows() {
+	sqlStr := "select id, name, age from user where id > ?"
+	rows, err := db.Query(sqlStr, 0)
+	if err != nil {
+		fmt.Printf("query failed, err: %v\n", err)
+		return
+	}
+	// 非常重要：关闭rows，释放持有的数据库连接
+	defer rows.Close()
 
+	// 循环读取结果集中的数据
+	for rows.Next() {
+		var u user
+		err := rows.Scan(&u.id, &u.name, &u.age)
+		if err != nil {
+			fmt.Printf("scan failed, err:%v\n", err)
+			return
+		}
+		fmt.Printf("id:%d name:%s age:%d\n", u.id, u.name, u.age)
+	}
+}
+```
 
-
-
-
-
-![](<../.gitbook/assets/image (5).png>)
+查询结果：![](<../.gitbook/assets/image (5).png>)
