@@ -21,7 +21,7 @@ CREATE TABLE `user` (
 show tables;
 ```
 
-<img src="../.gitbook/assets/image.png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
 
 插入两条数据：
 
@@ -64,7 +64,7 @@ func queryRow() {
 }
 ```
 
-查询结果：![](<../.gitbook/assets/image (1).png>)
+查询结果：![](<../.gitbook/assets/image (1) (1).png>)
 
 多行查询
 
@@ -94,3 +94,55 @@ func queryMultiRows() {
 ```
 
 查询结果：![](<../.gitbook/assets/image (5).png>)
+
+
+
+插入数据
+
+插入、更新、删除操作都使用 `Exec` 方法。
+
+```go
+func (db *DB) Exec(query string, args ...interface{}) (Result, error)
+```
+
+```go
+// insertRow 插入数据
+func insertRow() {
+	sqlStr := "insert into user(name, age) values (?,?)"
+	re, err := db.Exec(sqlStr, "jun", 22)
+	if err != nil {
+		fmt.Printf("insert failed, err:%v\n", err)
+		return
+	}
+	var newID int64
+	newID, err = re.LastInsertId() // 新插入数据的ID
+	if err != nil {
+		fmt.Printf("get newID failed, err:%v\n", err)
+		return
+	} else {
+		fmt.Printf("insert success, the id is %d.\n", newID)
+	}
+}
+```
+
+插入结果：![](../.gitbook/assets/image.png)
+
+
+
+更新数据
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考文档：[https://www.liwenzhou.com/posts/Go/go\_mysql/](https://www.liwenzhou.com/posts/Go/go\_mysql/)
