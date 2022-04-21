@@ -21,7 +21,7 @@ CREATE TABLE `user` (
 show tables;
 ```
 
-<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="original">
 
 插入两条数据：
 
@@ -39,7 +39,7 @@ insert into user (name, age) values("violette", 23)
 select * from user;
 ```
 
-![](<../.gitbook/assets/image (4) (1).png>)
+![](<../.gitbook/assets/image (4) (1) (1).png>)
 
 
 
@@ -64,7 +64,7 @@ func queryRow() {
 }
 ```
 
-查询结果：![](<../.gitbook/assets/image (1) (1).png>)
+查询结果：![](<../.gitbook/assets/image (1) (1) (1).png>)
 
 
 
@@ -153,7 +153,7 @@ func updateRow() {
 
 ```
 
-更新数据的结果：![](<../.gitbook/assets/image (4).png>)
+更新数据的结果：![](<../.gitbook/assets/image (4) (1).png>)
 
 
 
