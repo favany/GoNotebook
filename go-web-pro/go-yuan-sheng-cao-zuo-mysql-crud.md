@@ -2,7 +2,7 @@
 description: Go 原生操作 MySQL
 ---
 
-# Crud
+# Go 原生操作 MySQL CRUD
 
 先输入以下命令，在 MySQL 中建立一张表。
 
@@ -39,11 +39,11 @@ insert into user (name, age) values("violette", 23)
 select * from user;
 ```
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 
 
-单行查询
+### 单行查询
 
 ```go
 func (db *DB) QueryRow(query string, args ...interface{}) *Row go
@@ -66,7 +66,9 @@ func queryRow() {
 
 查询结果：![](<../.gitbook/assets/image (1) (1).png>)
 
-多行查询
+
+
+### 多行查询
 
 ```go
 // queryMultiRows 查询多条数据
@@ -93,11 +95,11 @@ func queryMultiRows() {
 }
 ```
 
-查询结果：![](<../.gitbook/assets/image (5).png>)
+查询结果：![](<../.gitbook/assets/image (5) (1).png>)
 
 
 
-插入数据
+### 插入数据
 
 插入、更新、删除操作都使用 `Exec` 方法。
 
@@ -129,19 +131,55 @@ func insertRow() {
 
 
 
-更新数据
+### 更新数据
+
+```go
+// 更新数据
+func updateRow() {
+	sqlStr := "update user set age=? where id = ?"
+	re, err := db.Exec(sqlStr, 39, 3)
+	if err != nil {
+		fmt.Printf("update failed, err:%v\n", err)
+		return
+	}
+	var n int64
+	n, err = re.RowsAffected() // 操作影响的行数
+	if err != nil {
+		fmt.Printf("`get RowsAffected failed, err:%v\n", err)
+		return
+	}
+	fmt.Printf("update success, affected rows: %d\n", n)
+}
+
+```
+
+更新数据的结果：![](<../.gitbook/assets/image (4).png>)
 
 
 
+### 删除数据
 
+```go
+// deleteRow 删除数据
+func deleteRow() {
+	sqlStr := "delete from user where id = ?"
+	re, err := db.Exec(sqlStr, 2)
+	if err != nil {
+		fmt.Printf("delete failed, err:%v\n", err)
+		return
+	}
+	var n int64
+	n, err = re.RowsAffected() // 操作影响的行数
+	if err != nil {
+		fmt.Printf("`get RowsAffected failed, err:%v\n", err)
+		return
+	}
+	fmt.Printf("delete success, affected rows: %d\n", n)
+}
 
+```
 
-
-
-
-
-
-
+删除数据的结果：![](<../.gitbook/assets/image (6).png>)
 
 
 
