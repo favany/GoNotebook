@@ -8,6 +8,8 @@
   * [基础部分](page-1/page-2/README.md)
     * [12. 函数](page-1/page-2/12.-han-shu-function.md)
     * [13. 多返回值函数](go-by-example/basic/13.-duo-fan-hui-zhi-han-shu.md)
+    * [14.可变参函数](go-by-example/basic/14.-ke-bian-can-han-shu.md)
+    * [15. 闭包](go-by-example/basic/15.-bi-bao.md)
 
 ## Struct 结构体 <a href="#struct" id="struct"></a>
 
