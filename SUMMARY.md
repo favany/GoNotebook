@@ -4,9 +4,9 @@
 * [Go 面试题](go-mian-shi-ti/README.md)
   * [Untitled](go-mian-shi-ti/untitled.md)
   * [数组与切片有什么异同](go-mian-shi-ti/shu-zu-yu-qie-pian-you-shi-mo-yi-tong.md)
-* [Page 1](page-1/README.md)
-  * [Page 2](page-1/page-2/README.md)
-    * [12. 函数 Function](page-1/page-2/12.-han-shu-function.md)
+* [跟着例子学习Go](go-by-example/README.md)
+  * [基础部分](go-by-example/basic/README.md)
+    * [12. 函数 Function](go-by-example/basic/12.-han-shu-function.md)
 
 ## Struct 结构体 <a href="#struct" id="struct"></a>
 
