@@ -14,11 +14,9 @@ var anonymousStruct struct {
 匿名结构体内部的赋值
 
 ```go
-anonymousStruct.name = "Meggy"
+anonymousStruct.name = "Echo"
 anonymousStruct.age = 23
 ```
-
-
 
 #### 完整代码
 
@@ -36,12 +34,11 @@ func main() {
 		age  int
 	}
 
-	anonymousStruct.name = "Meggy"
+	anonymousStruct.name = "Echo"
 	anonymousStruct.age = 23
 
 	fmt.Printf("type:%T value:%v", anonymousStruct, anonymousStruct)
 	// type:struct { name string; age int } value:{Meggy 23}
 
 }
-
 ```
