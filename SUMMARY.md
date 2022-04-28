@@ -6,7 +6,8 @@
   * [数组与切片有什么异同](go-mian-shi-ti/shu-zu-yu-qie-pian-you-shi-mo-yi-tong.md)
 * [跟着例子学习Go](page-1/README.md)
   * [基础部分](page-1/page-2/README.md)
-    * [12. 函数 Function](go-by-example/basic/function.md)
+    * [12. 函数](page-1/page-2/12.-han-shu-function.md)
+    * [13. 多返回值函数](go-by-example/basic/13.-duo-fan-hui-zhi-han-shu.md)
 
 ## Struct 结构体 <a href="#struct" id="struct"></a>
 
