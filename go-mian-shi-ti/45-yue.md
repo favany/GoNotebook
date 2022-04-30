@@ -84,6 +84,8 @@ func main() {
 
 解析 ： for range map 是无序的，如果第一次循环到 A，则输出 3；否则输出 2。
 
+代码实现：[https://replit.com/@Vooce/2022-4-30#main.go](https://replit.com/@Vooce/2022-4-30#main.go)
+
 </details>
 
 \
