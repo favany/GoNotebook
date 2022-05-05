@@ -49,7 +49,7 @@ for i := range s1 {
 
 
 
-4-30
+2022-4-30
 
 下面代码里的 counter 的输出值？
 
@@ -90,7 +90,7 @@ func main() {
 
 
 
-5-1
+2022-5-1
 
 关于协程，下面说法正确是（）
 
@@ -108,7 +108,7 @@ func main() {
 </details>
 
 \
-5-2
+2022-5-2
 
 关于循环语句，下面说法正确的有（）
 
@@ -122,5 +122,99 @@ func main() {
 <summary>答案</summary>
 
 参考答案及解析：CD。
+
+</details>
+
+
+
+5-3
+
+下面这段代码输出什么，说明原因。
+
+```go
+func main() {
+	slice := []int{0,1,2,3}
+	m := make(map[int]*int)
+
+	for key,val := range slice {
+		m[key] = &val
+	}
+
+	for k,v := range m {
+		fmt.Println(k,"->",*v)
+	}
+}
+```
+
+
+
+<details>
+
+<summary>答案</summary>
+
+答案：
+
+```go
+0 -> 3
+1 -> 3
+2 -> 3
+3 -> 3
+```
+
+
+
+解析：这是新手常会犯的错误写法，for range 循环的时候会**创建每个元素的副本，而不是元素的引用**，所以 m\[key] = \&val 取的都是变量 val 的地址，所以最后 map 中的所有元素的值都是变量 val 的地址，因为最后 val 被赋值为3，所有输出都是3.
+
+正确的写法：
+
+```go
+func main() {
+
+	slice := []int{0,1,2,3}
+	m := make(map[int]*int)
+
+	for key,val := range slice {
+		value := val
+		m[key] = &value
+	}
+
+	for k,v := range m {
+		fmt.Println(k,"===>",*v)
+	}
+}
+```
+
+
+
+扩展题目
+
+```go
+type Test struct {
+	name string
+}
+
+func (this *Test) Point(){
+	fmt.Println(this.name)
+}
+
+func main() {
+
+	ts := []Test{
+		{"a"},
+		{"b"},
+		{"c"},
+	}
+
+	for _,t := range ts {
+		//fmt.Println(reflect.TypeOf(t))
+		defer t.Point()
+	}
+	
+}
+```
+
+参考：https://blog.csdn.net/idwtwt/article/details/87378419
+
+
 
 </details>
