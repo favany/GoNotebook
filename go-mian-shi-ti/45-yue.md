@@ -240,3 +240,39 @@ map 在扩容后，会发生 key 的搬迁，原来落在同一个 bucket 中的
 多说一句，“迭代 map 的结果是无序的”这个特性是从 go 1.0 开始加入的。
 
 答案解析来自：[https://golang.design/go-questions/map/unordered/](https://golang.design/go-questions/map/unordered/)
+
+
+
+2022-5-6
+
+下面两段代码输出什么。
+
+```go
+// 1.
+func main() {
+    s := make([]int, 5)
+    s = append(s, 1, 2, 3)
+    fmt.Println(s)
+}
+
+// 2.
+func main() {
+    s := make([]int, 0)
+    s = append(s,1,2,3,4)
+    fmt.Println(s)
+}
+```
+
+<details>
+
+<summary>答案</summary>
+
+```
+代码 1 输出：[0 0 0 0 0 1 2 3]
+代码 2 输出：[1 2 3 4]
+```
+
+参考解析：这道题考的是使用 append 向 slice 添加元素，第一段代码常见的错误是 \[1 2 3]，需要注意。
+
+</details>
+
