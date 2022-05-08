@@ -6,6 +6,7 @@
   * [数组与切片有什么异同](go-mian-shi-ti/shu-zu-yu-qie-pian-you-shi-mo-yi-tong.md)
   * [41-50](go-mian-shi-ti/41-50.md)
   * [4-5月](go-mian-shi-ti/45-yue.md)
+  * [Go 进阶实战 100 题](go-mian-shi-ti/go-jin-jie-shi-zhan-100-ti.md)
   * [Go 并发编程](go-mian-shi-ti/go-bing-fa-bian-cheng.md)
 * [跟着例子学习Go](page-1/README.md)
   * [基础部分](page-1/page-2/README.md)
@@ -32,6 +33,7 @@
 * [Channel](concurrence/channel.md)
 * [goroutine](concurrence/goroutine.md)
 * [并发](concurrence/bing-fa.md)
+* [一文搞定 Go 并发的实现原理：goroutine](concurrence/yi-wen-gao-ding-go-bing-fa-de-shi-xian-yuan-li-goroutine.md)
 
 ## 常用代码块 <a href="#blocks" id="blocks"></a>
 
