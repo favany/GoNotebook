@@ -311,3 +311,33 @@ func main() {
 题目和解析来自：[https://golang.design/go-questions/map/element-address/](https://golang.design/go-questions/map/element-address/)
 
 </details>
+
+
+
+5-10
+
+如何确认两个 map 是否相等？
+
+<details>
+
+<summary>答案</summary>
+
+反射
+
+```go
+package main
+
+import( 
+    "fmt"
+    "relflect"
+)
+func main() {
+    var m map[string]int
+    var n map[string]int
+
+    fmt.Println(reflect.DeepEqual(m,n))
+}
+```
+
+</details>
+
