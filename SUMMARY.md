@@ -30,9 +30,6 @@
 ## 并发 <a href="#concurrence" id="concurrence"></a>
 
 * [并发安全和锁](concurrence/concurrence\_security.md)
-* [Channel](concurrence/channel.md)
-* [goroutine](concurrence/goroutine.md)
-* [并发](concurrence/bing-fa.md)
 * [一文搞定 Go 并发的实现原理：goroutine](concurrence/yi-wen-gao-ding-go-bing-fa-de-shi-xian-yuan-li-goroutine.md)
 
 ## 常用代码块 <a href="#blocks" id="blocks"></a>
