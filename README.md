@@ -7,4 +7,4 @@ coverY: 0
 
 你好👋 这是一个 Go 教程，也是一个 Go 学习博客。
 
-欢迎关注作者的GitHub：[https://github.com/Panamela](https://github.com/Panamela)
+欢迎关注作者的GitHub：[https://github.com/LiuYoga](https://github.com/LiuYoga)
